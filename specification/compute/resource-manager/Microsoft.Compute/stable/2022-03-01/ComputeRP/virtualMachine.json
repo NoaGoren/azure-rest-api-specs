@@ -2012,6 +2012,20 @@
       ],
       "description": "Describes a Virtual Machine Extension."
     },
+    "VirtualMachineExtensionForVM": {
+      "properties": {
+        "properties": {
+          "x-ms-client-flatten": true,
+          "$ref": "#/definitions/VirtualMachineExtensionProperties"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "./computeRPCommon.json#/definitions/ProxyResource"
+        }
+      ],
+      "description": "Describes a Virtual Machine Extension."
+    },
     "VirtualMachineExtensionUpdate": {
       "properties": {
         "properties": {
@@ -3095,7 +3109,7 @@
           "readOnly": true,
           "type": "array",
           "items": {
-            "$ref": "#/definitions/VirtualMachineExtension"
+            "$ref": "#/definitions/VirtualMachineExtensionForVM"
           },
           "description": "The virtual machine child extension resources."
         },
